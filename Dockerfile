@@ -4,7 +4,7 @@ FROM tomcat:8.0.20-jre8
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copy the Java web application WAR file into the webapps directory of Tomcat
-COPY target/*.jar /usr/local/tomcat/webapps/ROOT.jar
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port 8080 (the default Tomcat port)
 EXPOSE 8080
